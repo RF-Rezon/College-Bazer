@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const AdmissionPage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     setLoading(true);
@@ -39,7 +40,6 @@ const AdmissionPage = () => {
                 <td className="whitespace-nowrap px-4 py-2">
                   <Link
                     to={`/admission/${individual._id}`}
-                    href="#"
                     className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                   >
                     <button>Apply</button>

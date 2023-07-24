@@ -1,12 +1,12 @@
 import {
-    GithubAuthProvider,
-    GoogleAuthProvider,
-    createUserWithEmailAndPassword,
-    getAuth,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { app } from "./app";
@@ -17,6 +17,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [dynamicId, setDynamicId] = useState(null);
 
   const googleProvider = new GoogleAuthProvider();
   const gitProvider = new GithubAuthProvider();
@@ -59,7 +60,7 @@ const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  const authInfo = { user, createUser, signInUser, signInWithGoogle, signInWithGitHub, loading, logOut };
+  const authInfo = { user, createUser, signInUser, signInWithGoogle, signInWithGitHub, loading, logOut, dynamicId, setDynamicId};
   return (
     <div>
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
