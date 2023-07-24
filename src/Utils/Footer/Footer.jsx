@@ -18,8 +18,7 @@ const Footer = () => {
                           <div>
                 <h2 className="text-2xl font-medium text-gray-900">You can email Us</h2>
                 <p className="my-4 max-w-lg text-gray-700">
-                  You can email us. We can prepare for you the best food you ever tried!
-                  Best food with best Chef! 💗
+                  You can email us. We will email you back. Don't forget to give back you feedback to us! 💗
                 </p>
                           </div>
                 
@@ -77,7 +76,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                   <li>
                     <p className="my-4 max-w-lg text-gray-700">
-                     Street: Piazza Cardinale Riario Sforza 72
+                     Street: Vally street
                       </p>
                     </li>
                     <li>
@@ -117,7 +116,7 @@ const Footer = () => {
                           </nav>
                 
                           <p className="mt-8 text-xs text-gray-500">
-                &copy; 2023. IOR. All rights reserved.
+                &copy; 2023. College Bazar. All rights reserved.
                           </p>
                         </div>
                       </div>
